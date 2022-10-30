@@ -5,3 +5,11 @@ html {
 *, ::after, ::before {
     box-sizing: inherit;
 }
+
+.body {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #eeeeee;
+    font-family: Montserrat, sans-serif;
+    word-break: break-word;
+}
