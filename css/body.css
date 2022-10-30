@@ -1,0 +1,7 @@
+.body {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #eeeeee;
+    font-family: Lato, sans-serif;
+    word-break: break-word;
+}
