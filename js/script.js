@@ -42,22 +42,14 @@
   const render = () => {
     let htmlString = "";
 
-    tasks.forEach((element) => {
-      if (element.done) {
-        htmlString += `
-        <li class="list__item">
-        <button class="list__button list__button--done js-done"> ✔ </button>
-        <span class="list__taskText list__taskText--done">${element.content}</span>`;
-      } else {
-        htmlString += `
-        <li class="list__item">
-        <button class="list__button list__button--done js-done"></button>
-        <span class="list__taskText">${element.content}</span>`;
-      }
+    for (const task of tasks) {
       htmlString += `
+      <li class="list__item">
+      <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>
+      <span class="${task.done ? "list__item--done" : ""}">${task.content}</span>
       <button class="list__button list__button--remove js-remove">🗑</button>
       </li>`;
-    });
+    }
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
 

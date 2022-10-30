@@ -13,11 +13,7 @@
     padding: 5px 15px;
 }
 
-.list__taskText {
-    margin: 0px 10px;
-}
-
-.list__taskText--done {
+.list__item--done {
     text-decoration: line-through;
 }
 
@@ -25,11 +21,13 @@
     width: 30px;
     height: 30px;
     color: white;
+    cursor: pointer;
     border: none;
+    background-color: #1a7b1e;
 }
 
 .list__button--done {
-    background-color: #1a7b1e;
+    margin-right: 10px;
 }
 
 .list__button--remove {
