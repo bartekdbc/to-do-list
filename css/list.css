@@ -1,0 +1,30 @@
+.list {
+    list-style-type: none;
+}
+
+.list__item {
+
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.list__button--done {
+    border: none;
+    background-color: #1a7b1e;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.list__button--remove {
+    margin-left: 20px;
+    border: none;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}

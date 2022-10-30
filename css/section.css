@@ -1,0 +1,17 @@
+.section {
+    background-color: #ffffff;
+}
+
+.section__header {
+    padding: 20px;
+    border-bottom: 2px solid #eeeeee;
+    margin: 0;
+}
+
+.section__header--list {
+    margin: 10px 0px 0px 0px;
+}
+
+.section__list{
+    text-decoration: line-through;
+}
