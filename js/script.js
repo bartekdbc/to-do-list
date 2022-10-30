@@ -42,17 +42,22 @@
   const render = () => {
     let htmlString = "";
 
-    for (const task of tasks) {
+    tasks.forEach((element) => {
+      if (element.done) {
+        htmlString += `
+        <li class="list__item">
+        <button class="list__button list__button--done js-done"> ✔ </button>
+        <span class="list__taskText list__taskText--done">${element.content}</span>`;
+      } else {
+        htmlString += `
+        <li class="list__item">
+        <button class="list__button list__button--done js-done"></button>
+        <span class="list__taskText">${element.content}</span>`;
+      }
       htmlString += `
-        <li
-          class="list__item${task.done ? " list__item--done" : ""}"
-        >
-          <button class="list__button--done js-done"></button>
-          <button class="list__button--remove js-remove">🗑</button>
-          ${task.content}
-        </li>
-        `;
-    }
+      <button class="list__button list__button--remove js-remove">🗑</button>
+      </li>`;
+    });
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
@@ -81,7 +86,7 @@
     form.addEventListener("click", (event) => {
       document.querySelector(".js-newTask").focus();
       onFormSubmit(event);
-    } )
+    });
   };
 
   init();
