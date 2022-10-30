@@ -1,6 +1,6 @@
 # To do list ✔️
 
-![Bartek](https://github.com/bartekdbc/to-do-list/blob/master/images/headline.PNG)
+![Headline]()
 
 ## Table of content 
 
