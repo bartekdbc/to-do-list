@@ -1,7 +1,5 @@
 # To do list ✔️
 
-![Headline](https://github.com/bartekdbc/to-do-list/blob/master/images/headline.PNG)
-
 ## Table of content 
 
 - [Demo](#demo-🎮)
