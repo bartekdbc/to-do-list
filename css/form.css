@@ -17,7 +17,7 @@
     padding: 10px;
     outline: 1px solid #eeeeee;
     border: 1px solid #eeeeee;
-    color: #878787;
+    color: black;
     margin: 10px 20px 0 0;
 }
 
@@ -40,6 +40,10 @@
     border: none;
     margin-top: 10px;
     cursor: pointer;
+}
+
+.form__button:active {
+    border: 1px solid black;
 }
 
 @media (max-width: 767px) {

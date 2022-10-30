@@ -10,7 +10,7 @@
     grid-auto-rows: minmax(40px, auto);
     align-items: center;
     border-bottom: 2px solid #eeeeee;
-    padding: 10px 0px 10px 15px;
+    padding: 5px 15px;
 }
 
 .list__taskText {
@@ -25,7 +25,6 @@
     width: 30px;
     height: 30px;
     color: white;
-    cursor: pointer;
     border: none;
 }
 
