@@ -25,10 +25,28 @@
     background-color: #1a7b1e;
 }
 
+.list__button:hover {
+    background-color: hsl(122, 65%, 34%);
+}
+
+.list__button:active {
+    background-color: hsl(122, 65%, 39%);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
 .list__button--done {
     margin-right: 10px;
 }
 
 .list__button--remove {
     background-color: red;
+}
+
+.list__button--remove:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.list__button--remove:active {
+    background-color: hsl(0, 100%, 65%);
 }
