@@ -7,9 +7,10 @@
 .list__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
     align-items: center;
     border-bottom: 2px solid #eeeeee;
-    padding: 15px 15px;
+    padding: 10px;
 }
 
 .list__item--done {
@@ -35,7 +36,7 @@
     border-radius: 3px;
 }
 
-.list__button--done {
+.list__button--toggleDone {
     margin-right: 10px;
 }
 
