@@ -24,6 +24,7 @@
     cursor: pointer;
     border: none;
     background-color: #1a7b1e;
+    transition: 1s;
 }
 
 .list__button:hover {
@@ -42,6 +43,7 @@
 
 .list__button--remove {
     background-color: red;
+    transition: 1s;
 }
 
 .list__button--remove:hover {
