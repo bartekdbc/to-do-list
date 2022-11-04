@@ -1,25 +1,59 @@
 {
-  const tasks = [];
+  let tasks = [];
+  let hideDoneTask = false;
 
   const addNewTask = (newTaskContent) => {
-    tasks.push({
-      content: newTaskContent,
-    });
+    tasks = [
+      ...tasks, 
+      { content: newTaskContent }
+    ];
 
     render();
   };
 
   const removeTask = (taskIndex) => {
-    tasks.splice(taskIndex, 1);
+    tasks = [
+      ...tasks.slice(0, taskIndex), 
+      ...tasks.slice(taskIndex + 1)
+    ];
+
     render();
   };
 
   const toggleTaskDone = (taskIndex) => {
-    tasks[taskIndex].done = !tasks[taskIndex].done;
+    tasks = [
+      ...tasks.slice(0, taskIndex),
+      { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+      ...tasks.slice(taskIndex + 1),
+    ];
+
     render();
   };
 
-  const bindEvents = () => {
+  const markAllTasksDone = () => {
+    tasks = tasks.map((task) => ({
+      ...task,
+      done: true,
+    }
+    ))
+    render();
+  };
+
+  const hideDoneTasks = () => {
+    hideDoneTask = !hideDoneTask;
+
+    render();
+  };
+
+  const focusOnSubmit = () => {
+    const newTask = document.querySelector(".js-newTask")
+    newTask.value = "";
+    newTask.focus();
+    
+    render();
+  }
+
+  const removeButtonsEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
 
     removeButtons.forEach((removeButton, index) => {
@@ -27,7 +61,9 @@
         removeTask(index);
       });
     });
+  };
 
+  const toggleDoneButtonsEvents = () => {
     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
     toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -35,15 +71,35 @@
         toggleTaskDone(index);
       });
     });
-
-    document.querySelector(".js-newTask").value = "";
   };
 
-  const render = () => {
-    let htmlString = "";
+  const bindEvents = () => {
+    removeButtonsEvents();
+    toggleDoneButtonsEvents();
+  };
+
+  const renderButtons = (taskListHTMLContent) => {
+    let subtitleString = "";
+
+    if (taskListHTMLContent != "") {
+      subtitleString += `
+      <h2 class="section__header section__header--list js-subtitle">Lista zadań</h2>
+      <button class="section__button js-hideDoneTasks">${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone</button>
+      <button class="section__button js-allTasksDone"${tasks.every (({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>`;
+    } 
+    else if (taskListHTMLContent === "") {
+      subtitleString += `
+      <h2 class="section__header section__header--list js-subtitle">Lista zadań</h2>`;
+    }
+
+    document.querySelector(".js-subtitle").innerHTML = subtitleString;
+  };
+
+  const renderTasks = () => {
+    let taskListHTMLContent = "";
 
     for (const task of tasks) {
-      htmlString += `
+      taskListHTMLContent += `
       <li class="list__item">
         <button class="list__button list__button--toggleDone js-done">
           ${task.done ? "✔" : ""}
@@ -57,9 +113,30 @@
       </li>`;
     }
 
-    document.querySelector(".js-tasks").innerHTML = htmlString;
+    document.querySelector(".js-tasks").innerHTML = taskListHTMLContent;
+    renderButtons(taskListHTMLContent);
+  };
+
+  const bindButtonsEvents = () => {
+    const allTasksDoneButton = document.querySelector(".js-allTasksDone")
+    if (allTasksDoneButton) {
+      allTasksDoneButton.addEventListener("click", () => {
+        markAllTasksDone();
+      })
+    }
+    const hideDoneTasksButton = document.querySelector(".js-hideDoneTasks")
+    if (hideDoneTasksButton) {
+      hideDoneTasksButton.addEventListener("click", () => {
+        hideDoneTasks();
+      })
+    }
+  };
+
+  const render = () => {
+    renderTasks();
 
     bindEvents();
+    bindButtonsEvents();
   };
 
   const onFormSubmit = (event) => {
@@ -72,6 +149,7 @@
     }
 
     addNewTask(newTaskContent);
+    focusOnSubmit();
   };
 
   const init = () => {
@@ -80,11 +158,6 @@
     const form = document.querySelector(".js-form");
     form.addEventListener("submit", onFormSubmit);
 
-    const addNewTask = document.querySelector(".js-addNewTaskButton");
-    form.addEventListener("click", (event) => {
-      document.querySelector(".js-newTask").focus();
-      onFormSubmit(event);
-    });
   };
 
   init();
