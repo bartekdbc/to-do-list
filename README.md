@@ -1,5 +1,6 @@
 # To do list ✔️
 
+![Headline](https://github.com/bartekdbc/to-do-list/blob/master/images/headline.png)
 ## Table of content 
 
 - [Demo](#demo-🎮)
@@ -15,11 +16,13 @@ You can find a demo version [here](https://bartekdbc.github.io/to-do-list/).
 
 I would like to invite you to take a look at my "To do list" application.
 
-"To do list" is a web application which allows you to create a list of tasks that needs to be done in the near future. 
+"To do list" is a web application which allows you to create a list of tasks that need to be done in the near future. 
 
 There are two types of buttons next to each task:
 - green button allows you to mark the task as completed or not ✅
 - red button with trash icon is used to remove specific task from the board 🗑️.
+
+Moreover, when you type tasks in the list, two additional functionalities appear - you can either hide completed tasks or complete all the tasks listed below.
 
 This project is a part of Frontend Developer Course that I am currently participating in.
 
