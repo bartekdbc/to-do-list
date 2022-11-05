@@ -50,7 +50,7 @@
 
 .section__button:hover {
     color: hsl(187, 100%, 35%);
-    transition: 1s;
+    transition: 0.3s;
 }
 
 .section__button:active {
