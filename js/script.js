@@ -99,7 +99,7 @@
 
     for (const task of tasks) {
       taskListHTMLContent += `
-      <li class="list__item">
+      <li class="${task.done && hideDoneTask ? "list__item--hidden" : "list__item"}">
         <button class="list__button list__button--toggleDone js-done">
           ${task.done ? "✔" : ""}
         </button>
@@ -117,6 +117,10 @@
   };
 
   const bindButtonsEvents = () => {
+    if (tasks.length === 0) {
+      return;
+    }
+    
     const allTasksDoneButton = document.querySelector(".js-allTasksDone")
     if (allTasksDoneButton) {
       allTasksDoneButton.addEventListener("click", () => {
