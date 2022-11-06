@@ -80,7 +80,7 @@
   const renderButtons = (taskListHTMLContent) => {
     let subtitleString = "";
 
-    if (taskListHTMLContent != "") {
+    if (taskListHTMLContent !== "") {
       subtitleString += `
       <h2 class="section__header section__header--list js-subtitle">Lista zadań</h2>
       <button class="section__button js-hideDoneTasks">${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone</button>
