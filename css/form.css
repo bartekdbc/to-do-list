@@ -44,7 +44,7 @@
 
 .form__button:active {
     background-color: hsl(187, 100%, 35%);
-    border: 1px solid black;
+    outline: 1px solid black;
 }
 
 @media (max-width: 767px) {

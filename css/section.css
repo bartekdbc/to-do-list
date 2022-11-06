@@ -40,6 +40,7 @@
     text-align: center;
     max-height: 40px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 @media (max-width: 767px) {
@@ -50,7 +51,6 @@
 
 .section__button:hover {
     color: hsl(187, 100%, 35%);
-    transition: 0.3s;
 }
 
 .section__button:active {
