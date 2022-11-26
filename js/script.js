@@ -82,8 +82,8 @@
 
     if (taskListHTMLContent !== "") {
       subtitleString += `
-      <button class="section__button js-hideDoneTasks">${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone</button>
-      <button class="section__button js-allTasksDone"${tasks.every (({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>`;
+      <button class="buttons__button js-hideDoneTasks">${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone</button>
+      <button class="buttons__button js-allTasksDone"${tasks.every (({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>`;
     } 
     else if (taskListHTMLContent === "") {
       subtitleString += ``;
