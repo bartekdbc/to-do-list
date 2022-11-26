@@ -7,10 +7,6 @@ html {
 }
 
 .body {
-    margin: 10px auto;
-    padding: 20px;
     background-color: #eeeeee;
     font-family: Montserrat, sans-serif;
-    word-break: break-word;
-    max-width: 900px;
 }
