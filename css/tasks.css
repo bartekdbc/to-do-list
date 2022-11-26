@@ -1,6 +1,6 @@
 .tasks {
     width: 100%;
-    tasks-style-type: none;
+    list-style-type: none;
     padding: 20px;
     margin: auto;
 }
