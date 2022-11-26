@@ -11,7 +11,6 @@
 }
 
 .section__header--list {
-    font-size: 24px;
     padding: 0px;
     border: none;
 }
@@ -19,7 +18,7 @@
 .section__header--grid {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    grid-gap: 20px;
+    grid-gap: 10px;
     border-bottom: 2px solid #eeeeee;
     padding: 20px;
 }
