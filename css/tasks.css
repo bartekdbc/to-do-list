@@ -1,11 +1,11 @@
-.list {
+.tasks {
     width: 100%;
-    list-style-type: none;
+    tasks-style-type: none;
     padding: 20px;
     margin: auto;
 }
 
-.list__item {
+.tasks__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
@@ -15,16 +15,16 @@
     visibility: visible;
 }
 
-.list__item--hidden {
+.tasks__item--hidden {
     height: 0px;
     visibility: hidden;
 }
 
-.list__item--done {
+.tasks__item--done {
     text-decoration: line-through;
 }
 
-.list__button {
+.tasks__button {
     width: 30px;
     height: 30px;
     color: white;
@@ -34,29 +34,29 @@
     transition: 0.3s;
 }
 
-.list__button:hover {
+.tasks__button:hover {
     background-color: hsl(122, 65%, 34%);
 }
 
-.list__button:active {
+.tasks__button:active {
     background-color: hsl(122, 65%, 39%);
     border: 1px solid black;
     border-radius: 3px;
 }
 
-.list__button--toggleDone {
+.tasks__button--toggleDone {
     margin-right: 10px;
 }
 
-.list__button--remove {
+.tasks__button--remove {
     background-color: red;
     transition: 0.3s;
 }
 
-.list__button--remove:hover {
+.tasks__button--remove:hover {
     background-color: hsl(0, 100%, 60%);
 }
 
-.list__button--remove:active {
+.tasks__button--remove:active {
     background-color: hsl(0, 100%, 65%);
 }
