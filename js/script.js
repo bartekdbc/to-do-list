@@ -82,16 +82,14 @@
 
     if (taskListHTMLContent !== "") {
       subtitleString += `
-      <h2 class="section__header section__header--list js-subtitle">Lista zadań</h2>
       <button class="section__button js-hideDoneTasks">${hideDoneTask ? "Pokaż" : "Ukryj"} ukończone</button>
       <button class="section__button js-allTasksDone"${tasks.every (({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>`;
     } 
     else if (taskListHTMLContent === "") {
-      subtitleString += `
-      <h2 class="section__header section__header--list js-subtitle">Lista zadań</h2>`;
+      subtitleString += ``;
     }
 
-    document.querySelector(".js-subtitle").innerHTML = subtitleString;
+    document.querySelector(".js-buttons").innerHTML = subtitleString;
   };
 
   const renderTasks = () => {
