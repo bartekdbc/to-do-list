@@ -1,17 +1,23 @@
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .buttons__button {
-    background-color: #ffffff;
+    background: transparent;
     color: hsl(187, 100%, 25%);
     border: none;
     font-size: 18px;
     text-align: center;
     max-height: 40px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 @media (max-width: 767px) {
     .buttons__button {
-        width: 100%;
+        flex-basis: 100%;
+        margin: 10px;
     }
 }
 
