@@ -4,16 +4,16 @@
 
 ## Table of content
 
-- [Demo](#demo-🎮)
-- [Description](#description-📖)
-- [Preview](#preview-👀)
-- [Technologies](#technologies-🤖)
+- [Demo](#demo)
+- [Description](#description)
+- [Preview](#preview)
+- [Technologies](#technologies)
 
-## Demo 🎮
+## 🎮Demo
 
 You can find a demo version [here](https://bartekdbc.github.io/to-do-list/).
 
-## Description 📖
+## 📖Description
 
 I would like to invite you to take a look at my "To do list" application.
 
@@ -28,11 +28,11 @@ Moreover, when you type tasks in the list, two additional functionalities appear
 
 This project is a part of Frontend Developer Course that I am currently participating in.
 
-## Preview 👀
+## 👀Preview
 
 ![Preview](/images/Preview.gif)
 
-## Technologies 🤖
+## 🤖Technologies
 
 - HTML
 - CSS
